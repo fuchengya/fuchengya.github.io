@@ -135,34 +135,42 @@
   /*夜间模式伪类遮罩层透明*/
   [data-theme="dark"] #recent-posts > .recent-post-item {
     background: #121212;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] .card-widget {
     background: #121212 !important;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] div#post {
     background: #121212 !important;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] div#tag {
     background: #121212 !important;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] div#archive {
     background: #121212 !important;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] div#page {
     background: #121212 !important;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] div#category {
     background: #121212 !important;
+    opacity: 0.7;
   }
   
   [data-theme="dark"] div#category {
     background: transparent !important;
+    opacity: 0.7;
   }
   /* 页脚透明 */
   #footer {
@@ -186,7 +194,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #3b70fc;
+    background-color: #FFB6C1;
     border-radius: 2em;
   }
   
@@ -196,7 +204,7 @@
   
   ::-moz-selection {
     color: #fff;
-    background-color: #3b70fc;
+    background-color: #FFB6C1;
   }
   
   /* 音乐播放器 */
