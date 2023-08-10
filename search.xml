@@ -59,5 +59,27 @@
     </entry>
     
     
+    
+    <entry>
+      <title></title>
+      <link href="/js/weather.js"/>
+      <url>/js/weather.js</url>
+      
+        <content type="html"><![CDATA[// WIDGET = {//     "CONFIG": {//         "layout": "1",//         "width": "300",//         "height": "100",//         "background": "1",//         "dataColor": "FFFFFF",//         "borderRadius": "5",//         "modules": "01",//         "key": "41e1ab59bba1464f85063a94b38aadd0"//     }// }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/DynamicTitles.js"/>
+      <url>/js/DynamicTitles.js</url>
+      
+        <content type="html"><![CDATA[//动态标题var OriginTitile = document.title;var titleTime;document.addEventListener('visibilitychange', function () {    if (document.hidden) {        //离开当前页面时标签显示内容        document.title = 'w(ﾟДﾟ)w 不要走！再看看嘛！';        clearTimeout(titleTime);    }    else {        //返回当前页面时标签显示内容        document.title = '♪(^∇^*)欢迎回来！' + OriginTitile;        //两秒后变回正常标题        titleTime = setTimeout(function () {            document.title = OriginTitile;        }, 2000);    }});]]></content>
+      
+    </entry>
+    
+    
   
 </search>
