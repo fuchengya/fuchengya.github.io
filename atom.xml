@@ -6,7 +6,7 @@
   <link href="http://fuchengya.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuchengya.github.io/"/>
-  <updated>2023-10-20T12:33:02.257Z</updated>
+  <updated>2023-10-20T12:48:50.731Z</updated>
   <id>http://fuchengya.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>一个简单的测试</title>
     <link href="http://fuchengya.github.io/posts/0.html"/>
     <id>http://fuchengya.github.io/posts/0.html</id>
     <published>2023-10-20T11:54:35.371Z</published>
-    <updated>2023-10-20T12:33:02.257Z</updated>
+    <updated>2023-10-20T12:48:50.731Z</updated>
     
     <content type="html"><![CDATA[<p><img src="../image/test/image-20231020200515025.png" alt="image-20231020200515025"></p><p><img src="../image/test/image-20231020203242355.png" alt="image-20231020203242355"></p><p><img src="../image/test/image-20231020203251702.png" alt="image-20231020203251702"></p>]]></content>
     
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="测试" scheme="http://fuchengya.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
