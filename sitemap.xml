@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fuchengya.github.io/posts/db5a5ee4.html</loc>
+    
+    <lastmod>2023-10-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/posts/db5a5ee4.html</loc>
+    
+    <lastmod>2023-10-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://fuchengya.github.io/posts/6fa67ee1.html</loc>
     
     <lastmod>2023-10-21</lastmod>
@@ -12,24 +30,6 @@
   
   <url>
     <loc>http://fuchengya.github.io/posts/b24dd347.html</loc>
-    
-    <lastmod>2023-10-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fuchengya.github.io/posts/db5a5ee4.html</loc>
-    
-    <lastmod>2023-10-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fuchengya.github.io/posts/db5a5ee4.html</loc>
     
     <lastmod>2023-10-21</lastmod>
     
@@ -83,6 +83,13 @@
 
   
   <url>
+    <loc>http://fuchengya.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2023-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://fuchengya.github.io/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/</loc>
     <lastmod>2023-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -97,14 +104,7 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/Vue3/</loc>
-    <lastmod>2023-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://fuchengya.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://fuchengya.github.io/tags/Vue2/</loc>
     <lastmod>2023-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -117,17 +117,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://fuchengya.github.io/tags/Vue3/</loc>
+    <lastmod>2023-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>http://fuchengya.github.io/categories/Vue/</loc>
+    <loc>http://fuchengya.github.io/categories/%E5%8F%AE%E5%92%9A/</loc>
     <lastmod>2023-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/%E5%8F%AE%E5%92%9A/</loc>
+    <loc>http://fuchengya.github.io/categories/Vue/</loc>
     <lastmod>2023-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
