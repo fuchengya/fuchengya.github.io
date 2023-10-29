@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fuchengya.github.io/posts/10d06ba3.html</loc>
+    
+    <lastmod>2023-10-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://fuchengya.github.io/posts/ca159f6a.html</loc>
     
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,7 +166,7 @@
 
   <url>
     <loc>http://fuchengya.github.io/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,63 +174,77 @@
   
   <url>
     <loc>http://fuchengya.github.io/tags/promise/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/%E8%AF%A6%E7%BB%86%E7%89%88/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://fuchengya.github.io/tags/Vue/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/Vue2/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/Express/</loc>
+    <lastmod>2023-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C/</loc>
+    <lastmod>2023-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/Vue/</loc>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/Vue3/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/JavaScript/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/tags/%E5%88%9D%E4%BD%93%E9%AA%8C/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -230,21 +253,28 @@
   
   <url>
     <loc>http://fuchengya.github.io/categories/promise/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/categories/%E5%B0%8F%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/categories/Vue/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://fuchengya.github.io/categories/JavaScript/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
