@@ -260,20 +260,6 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/promise/</loc>
-    <lastmod>2023-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://fuchengya.github.io/tags/%E8%AF%A6%E7%BB%86%E7%89%88/</loc>
-    <lastmod>2023-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://fuchengya.github.io/tags/Vue/</loc>
     <lastmod>2023-11-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -289,6 +275,20 @@
   
   <url>
     <loc>http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/</loc>
+    <lastmod>2023-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/promise/</loc>
+    <lastmod>2023-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/%E8%AF%A6%E7%BB%86%E7%89%88/</loc>
     <lastmod>2023-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -346,14 +346,14 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/promise/</loc>
+    <loc>http://fuchengya.github.io/categories/Vue/</loc>
     <lastmod>2023-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/Vue/</loc>
+    <loc>http://fuchengya.github.io/categories/promise/</loc>
     <lastmod>2023-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
