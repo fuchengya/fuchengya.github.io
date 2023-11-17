@@ -201,9 +201,9 @@
     <category term="promise" scheme="http://fuchengya.github.io/categories/promise/"/>
     
     
-    <category term="精简版" scheme="http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/"/>
-    
     <category term="promise" scheme="http://fuchengya.github.io/tags/promise/"/>
+    
+    <category term="精简版" scheme="http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/"/>
     
   </entry>
   
@@ -484,13 +484,13 @@
     <category term="Vue" scheme="http://fuchengya.github.io/categories/Vue/"/>
     
     
+    <category term="详细版" scheme="http://fuchengya.github.io/tags/%E8%AF%A6%E7%BB%86%E7%89%88/"/>
+    
     <category term="脚手架" scheme="http://fuchengya.github.io/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
     
     <category term="Vue" scheme="http://fuchengya.github.io/tags/Vue/"/>
     
     <category term="Vue3" scheme="http://fuchengya.github.io/tags/Vue3/"/>
-    
-    <category term="详细版" scheme="http://fuchengya.github.io/tags/%E8%AF%A6%E7%BB%86%E7%89%88/"/>
     
   </entry>
   
