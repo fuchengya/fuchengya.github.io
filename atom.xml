@@ -6,7 +6,7 @@
   <link href="http://fuchengya.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuchengya.github.io/"/>
-  <updated>2024-07-03T23:47:32.965Z</updated>
+  <updated>2024-07-04T15:29:51.554Z</updated>
   <id>http://fuchengya.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://fuchengya.github.io/posts/b234e982.html"/>
     <id>http://fuchengya.github.io/posts/b234e982.html</id>
     <published>2024-07-03T23:45:26.000Z</published>
-    <updated>2024-07-03T23:47:32.965Z</updated>
+    <updated>2024-07-04T15:29:51.554Z</updated>
     
-    <content type="html"><![CDATA[<p>初识CAD</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="初识CAD"><a href="#初识CAD" class="headerlink" title="初识CAD"></a>初识CAD</h1><p>CAD基础常用指令（适用于Rhinoceros 4.0犀牛、AutoCAD14）</p><div class="table-container"><table><thead><tr><th style="text-align:center">TRIM    TR</th><th style="text-align:center">修剪</th><th style="text-align:center">COPY  CO</th><th style="text-align:center">复制</th><th style="text-align:center">erase E</th><th style="text-align:center">删除</th></tr></thead><tbody><tr><td style="text-align:center">mirror mi</td><td style="text-align:center">镜像</td><td style="text-align:center">offset  of</td><td style="text-align:center">偏移</td><td style="text-align:center">rotate r</td><td style="text-align:center">旋转</td></tr><tr><td style="text-align:center">break br</td><td style="text-align:center">打断</td><td style="text-align:center">explode x</td><td style="text-align:center">分解</td><td style="text-align:center">scale sc</td><td style="text-align:center">等比放大</td></tr><tr><td style="text-align:center">ARC a</td><td style="text-align:center">弧</td><td style="text-align:center">circle</td><td style="text-align:center">圆</td><td style="text-align:center">line L</td><td style="text-align:center">线</td></tr></tbody></table></div><p>常用快捷键</p><div class="table-container"><table><thead><tr><th>F1~F7</th><th>调整坐标系</th></tr></thead><tbody><tr><td>F8</td><td>调整直线任意方向或者垂直直角坐标系</td></tr></tbody></table></div><h1 id="CAD描图"><a href="#CAD描图" class="headerlink" title="CAD描图"></a>CAD描图</h1><p>1、点击Photoshop CS ，文件-&gt;导入-&gt;选择机器（例如A688）-&gt;点击扫描，将实体放在扫描仪上面进行扫描<br>2、复制一个定型框，使用犀牛描图，pi指令插入图片，选择定性框</p><p>3、图片插入成功之后，使用指令rotate将图片旋转90°。</p><p>4、点击鼠标中键，选择合适曲线进行描边</p><p>5、注意细节：拐弯处密集节点，直线处 稀疏节点。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;初识CAD&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;初识CAD&quot;&gt;&lt;a href=&quot;#初识CAD&quot; class=&quot;headerlink&quot; title=&quot;初识CAD&quot;&gt;&lt;/a&gt;初识CAD&lt;/h1&gt;&lt;p&gt;CAD基础常用指令（适用于Rhinoceros 4.0犀牛、AutoCAD14）&lt;/p&gt;
+&lt;div class=&quot;t</summary>
       
     
     
