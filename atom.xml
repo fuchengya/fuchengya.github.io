@@ -110,9 +110,9 @@
     <category term="JavaScript" scheme="http://fuchengya.github.io/categories/JavaScript/"/>
     
     
-    <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
     <category term="JavaScript" scheme="http://fuchengya.github.io/tags/JavaScript/"/>
+    
+    <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -138,9 +138,9 @@
     <category term="CSS" scheme="http://fuchengya.github.io/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="http://fuchengya.github.io/tags/CSS/"/>
-    
     <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="CSS" scheme="http://fuchengya.github.io/tags/CSS/"/>
     
   </entry>
   
@@ -301,9 +301,9 @@
     <category term="promise" scheme="http://fuchengya.github.io/categories/promise/"/>
     
     
-    <category term="promise" scheme="http://fuchengya.github.io/tags/promise/"/>
-    
     <category term="精简版" scheme="http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/"/>
+    
+    <category term="promise" scheme="http://fuchengya.github.io/tags/promise/"/>
     
   </entry>
   
