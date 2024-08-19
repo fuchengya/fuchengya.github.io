@@ -6,7 +6,7 @@
   <link href="http://fuchengya.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuchengya.github.io/"/>
-  <updated>2024-08-19T12:03:00.412Z</updated>
+  <updated>2024-08-19T13:18:59.106Z</updated>
   <id>http://fuchengya.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shell</title>
+    <link href="http://fuchengya.github.io/posts/84539df9.html"/>
+    <id>http://fuchengya.github.io/posts/84539df9.html</id>
+    <published>2024-08-19T13:12:09.000Z</published>
+    <updated>2024-08-19T13:18:59.106Z</updated>
+    
+    
+    
+    
+    <category term="Linux" scheme="http://fuchengya.github.io/categories/Linux/"/>
+    
+    <category term="Shell" scheme="http://fuchengya.github.io/categories/Shell/"/>
+    
+    
+    <category term="Shell" scheme="http://fuchengya.github.io/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux操作系统</title>
@@ -498,31 +517,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;解构的概念&quot;&gt;&lt;a href=&quot;#解构的概念&quot; class=&quot;headerlink&quot; title=&quot;解构的概念&quot;&gt;&lt;/a&gt;解构的概念&lt;/h2&gt;&lt;p&gt;JavaScript中的解构是一种从复杂数据结构中提取值并赋值给变量的技巧。这使得我们可以轻松地访问和使用数据结构的</summary>
-      
-    
-    
-    
-    <category term="JavaScript" scheme="http://fuchengya.github.io/categories/JavaScript/"/>
-    
-    
-    <category term="JavaScript" scheme="http://fuchengya.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对象的序列化</title>
-    <link href="http://fuchengya.github.io/posts/37034df3.html"/>
-    <id>http://fuchengya.github.io/posts/37034df3.html</id>
-    <published>2023-10-18T06:58:19.000Z</published>
-    <updated>2023-10-22T10:12:21.456Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>对象的序列化是将对象转换为一种可传输或可存储的格式，以便在需要时可以重新还原为原始对象。</p><h3 id="个人对这个概念的理解："><a href="#个人对这个概念的理解：" class="headerlink" title="个人对这个概念的理解："></a><strong>个人对这个概念的理解</strong>：</h3><p><strong>对象的序列化</strong>就像将一个对象变成一个字符串一样，就好像你把一堆积木拼好后，拍下一张照片，把照片存起来一样。这个字符串可以轻松地被传输给其他地方，就像你可以把照片发送给你的朋友一样。</p><p>然后，<strong>反序列化</strong>就像你的朋友收到了你的照片，可以根据照片上的信息重新组装出相同的积木。就像他们可以看到照片上有哪些积木，然后用同样的积木重新构建出来。</p><h2 id="对象序列化的步骤："><a href="#对象序列化的步骤：" class="headerlink" title="对象序列化的步骤："></a><strong>对象序列化的步骤</strong>：</h2><ol><li><p><strong>创建对象</strong>：首先，您需要创建一个JavaScript对象，该对象可以包含各种属性和值。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> student = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">25</span>,</span><br><span class="line">  <span class="attr">courses</span>: [<span class="string">&#x27;Math&#x27;</span>, <span class="string">&#x27;History&#x27;</span>, <span class="string">&#x27;English&#x27;</span>],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><p><strong>序列化对象</strong>：将JavaScript对象序列化为字符串或其他格式。最常见的是将对象转换为JSON字符串，可以使用<code>JSON.stringify()</code>方法来执行此操作。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> serializedStudent = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(student);</span><br></pre></td></tr></table></figure></li><li><p><strong>传输或存储数据</strong>：将序列化后的字符串传输到网络上的其他系统，存储在本地存储中，或以其他方式传递和存储数据。</p></li><li><p><strong>反序列化数据</strong>：当需要使用数据时，可以将序列化的字符串反序列化为原始JavaScript对象。通常，使用<code>JSON.parse()</code>方法来执行此操作。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> receivedData = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;Bob&quot;,&quot;age&quot;:22,&quot;courses&quot;:[&quot;Physics&quot;,&quot;Chemistry&quot;]&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> deserializedStudent = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(receivedData);</span><br></pre></td></tr></table></figure><p><code>deserializedStudent</code> 现在包含了反序列化后的 JavaScript 对象，我们可以像访问常规对象一样使用它：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(deserializedStudent.<span class="property">name</span>);     <span class="comment">// 输出 &#x27;Bob&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(deserializedStudent.<span class="property">age</span>);      <span class="comment">// 输出 22</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(deserializedStudent.<span class="property">courses</span>);  <span class="comment">// 输出 [&#x27;Physics&#x27;, &#x27;Chemistry&#x27;]</span></span><br></pre></td></tr></table></figure></li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>序列化是将原本是数组或者对象的里面的数据转化为json格式的数据（<code>JSON.stringify()</code>方法）</p><p>反序列化，就是将JSON里面的数据，转换为数组（<code>JSON.parse()</code>方法）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;对象的序列化是将对象转换为一种可传输或可存储的格式，以便在需要时可以重新还原为原始对象。&lt;/p&gt;
-&lt;h3 id=&quot;个人对这个概念的理解：&quot;&gt;</summary>
       
     
     
