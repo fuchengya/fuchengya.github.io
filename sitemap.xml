@@ -315,7 +315,7 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/JavaScript/</loc>
+    <loc>http://fuchengya.github.io/tags/CSS/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -329,21 +329,14 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/CSS/</loc>
+    <loc>http://fuchengya.github.io/tags/JavaScript/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2024-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://fuchengya.github.io/tags/Linux/</loc>
+    <loc>http://fuchengya.github.io/tags/Shell/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -364,7 +357,14 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/Shell/</loc>
+    <loc>http://fuchengya.github.io/tags/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2024-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/Linux/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -406,14 +406,14 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/</loc>
+    <loc>http://fuchengya.github.io/tags/Vue3/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/Vue3/</loc>
+    <loc>http://fuchengya.github.io/tags/%E7%B2%BE%E7%AE%80%E7%89%88/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -527,13 +527,6 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/JavaScript/</loc>
-    <lastmod>2024-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://fuchengya.github.io/categories/CSS/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -541,7 +534,7 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/Linux%E5%9F%BA%E7%A1%80/</loc>
+    <loc>http://fuchengya.github.io/categories/JavaScript/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -549,6 +542,13 @@
   
   <url>
     <loc>http://fuchengya.github.io/categories/Shell/</loc>
+    <lastmod>2024-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/categories/Linux%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
