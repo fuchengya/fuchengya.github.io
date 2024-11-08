@@ -6,7 +6,7 @@
   <link href="http://fuchengya.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuchengya.github.io/"/>
-  <updated>2024-11-08T06:23:54.354Z</updated>
+  <updated>2024-11-08T06:24:44.381Z</updated>
   <id>http://fuchengya.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://fuchengya.github.io/posts/ee6694ba.html"/>
     <id>http://fuchengya.github.io/posts/ee6694ba.html</id>
     <published>2024-11-08T03:03:16.000Z</published>
-    <updated>2024-11-08T06:23:54.354Z</updated>
+    <updated>2024-11-08T06:24:44.381Z</updated>
     
     <content type="html"><![CDATA[<p>ASD-A2-0721-L的维修<img src="../image/伺服驱动器/image-20241024105531737.png" alt="image-20241024105531737"></p><p><img src="../image/伺服驱动器/image-20241024105603915.png" alt="image-20241024105603915"></p><p><img src="../image/伺服驱动器/image-20241024105632375.png" alt="image-20241024105632375"></p><p><img src="../image/伺服驱动器/MBXY-CR-32c5ea3173297fb1eb45975be533cc46.gif" alt="MBXY-CR-32c5ea3173297fb1eb45975be533cc46"></p>]]></content>
     
@@ -292,9 +292,9 @@
     <category term="JavaScript" scheme="http://fuchengya.github.io/categories/JavaScript/"/>
     
     
-    <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
     <category term="JavaScript" scheme="http://fuchengya.github.io/tags/JavaScript/"/>
+    
+    <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -320,9 +320,9 @@
     <category term="CSS" scheme="http://fuchengya.github.io/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="http://fuchengya.github.io/tags/CSS/"/>
-    
     <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="CSS" scheme="http://fuchengya.github.io/tags/CSS/"/>
     
   </entry>
   
