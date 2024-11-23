@@ -309,9 +309,9 @@
       
         <tags>
             
-            <tag> 面试题 </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> 面试题 </tag>
             
         </tags>
       
@@ -338,9 +338,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> 面试题 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -816,9 +816,9 @@
             
             <tag> 脚手架 </tag>
             
-            <tag> Vue2 </tag>
-            
             <tag> Vue </tag>
+            
+            <tag> Vue2 </tag>
             
         </tags>
       
@@ -843,9 +843,9 @@
       
         <tags>
             
-            <tag> Vue2 </tag>
-            
             <tag> Vue </tag>
+            
+            <tag> Vue2 </tag>
             
         </tags>
       
@@ -873,17 +873,6 @@
     
   
   
-    
-    
-    <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
     
     
     <entry>
@@ -936,6 +925,17 @@
       <url>/js/weather.js</url>
       
         <content type="html"><![CDATA[// WIDGET = {//     "CONFIG": {//         "layout": "1",//         "width": "300",//         "height": "100",//         "background": "1",//         "dataColor": "FFFFFF",//         "borderRadius": "5",//         "modules": "01",//         "key": "41e1ab59bba1464f85063a94b38aadd0"//     }// }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
