@@ -360,7 +360,7 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/CSS/</loc>
+    <loc>http://fuchengya.github.io/tags/JavaScript/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -374,7 +374,7 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/JavaScript/</loc>
+    <loc>http://fuchengya.github.io/tags/CSS/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -535,13 +535,6 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://fuchengya.github.io/tags/SMT/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -550,6 +543,13 @@
   
   <url>
     <loc>http://fuchengya.github.io/tags/SMD/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://fuchengya.github.io/tags/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -586,6 +586,13 @@
   </url>
   
   <url>
+    <loc>http://fuchengya.github.io/categories/JavaScript/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://fuchengya.github.io/categories/%E5%B0%8F%E5%8A%9F%E8%83%BD/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -607,13 +614,6 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/JavaScript/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://fuchengya.github.io/categories/Linux%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -621,14 +621,14 @@
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E8%AF%95/</loc>
+    <loc>http://fuchengya.github.io/categories/Shell/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://fuchengya.github.io/categories/Shell/</loc>
+    <loc>http://fuchengya.github.io/categories/%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E8%AF%95/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
