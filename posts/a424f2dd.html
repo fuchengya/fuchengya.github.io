@@ -1,0 +1,485 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Vue面试题 | 浮城</title><meta name="author" content="浮城"><meta name="copyright" content="浮城"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1、讲一下你对Vue生命周期的理解 首先来谈谈生命周期是什么，可以通俗的理解成“人的一生”，从出生到死亡是人的一生，也是一个完整的生命周期。Vue中的生命周期具有8个阶段，创建前后、挂载前后、更新前后、销毁前后。 创建前：组件实例被创建，但是没有初始化数据和方法，data和methods还是空的。 创建后：组件实例已经成功初始化，data和methods已经准备好了，你可以在这个阶段进行数据的初始">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue面试题">
+<meta property="og:url" content="http://fuchengya.github.io/posts/a424f2dd.html">
+<meta property="og:site_name" content="浮城">
+<meta property="og:description" content="1、讲一下你对Vue生命周期的理解 首先来谈谈生命周期是什么，可以通俗的理解成“人的一生”，从出生到死亡是人的一生，也是一个完整的生命周期。Vue中的生命周期具有8个阶段，创建前后、挂载前后、更新前后、销毁前后。 创建前：组件实例被创建，但是没有初始化数据和方法，data和methods还是空的。 创建后：组件实例已经成功初始化，data和methods已经准备好了，你可以在这个阶段进行数据的初始">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://fuchengya.github.io/image/Vue%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231113164718448.png">
+<meta property="article:published_time" content="2023-11-13T08:24:48.000Z">
+<meta property="article:modified_time" content="2023-11-17T07:01:03.120Z">
+<meta property="article:author" content="浮城">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="Vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://fuchengya.github.io/image/Vue%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231113164718448.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://fuchengya.github.io/posts/a424f2dd.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/128.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="mask-icon" href="/img/siteicon/128.png" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Vue面试题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-17 15:01:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.1.8/lib/clock.min.css" /><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="浮城" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t3.picb.cc/2023/08/09/I9ZjKd.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-video"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/cinemas"><i class="fa-fw fas fa-video"></i><span> 追剧</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/%E5%88%9D%E4%BD%93%E9%AA%8C"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/../image/Vue%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231113164718448.png')"><nav id="nav"><span id="blog-info"><a href="/" title="浮城"><span class="site-name">浮城</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-video"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/cinemas"><i class="fa-fw fas fa-video"></i><span> 追剧</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/%E5%88%9D%E4%BD%93%E9%AA%8C"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Vue面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-13T08:24:48.000Z" title="发表于 2023-11-13 16:24:48">2023-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-17T07:01:03.120Z" title="更新于 2023-11-17 15:01:03">2023-11-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Vue/">Vue</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Vue面试题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="1、讲一下你对Vue生命周期的理解"><a href="#1、讲一下你对Vue生命周期的理解" class="headerlink" title="1、讲一下你对Vue生命周期的理解"></a>1、讲一下你对Vue生命周期的理解</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231113180459687.png" alt="image-20231113180459687"></p>
+<p>首先来谈谈生命周期是什么，可以通俗的理解成“人的一生”，从出生到死亡是人的一生，也是一个完整的生命周期。Vue中的生命周期具有8个阶段，创建前后、挂载前后、更新前后、销毁前后。</p>
+<p>创建前：组件实例被创建，但是没有初始化数据和方法，data和methods还是空的。</p>
+<p>创建后：组件实例已经成功初始化，data和methods已经准备好了，你可以在这个阶段进行数据的初始化和异步操作。</p>
+<p>挂载前：创建虚拟DOM但是不进行挂载，你可以这个阶段执行一些操作用来准备渲染。</p>
+<p>挂载后：虚拟DOM中的组件已经被挂载到实际DOM上面去了，可以在这一阶段对DOM元素进行操作。更新前：</p>
+<p>更新前：数据发生改变时，就会触发这个生命周期钩子函数，触发之后虚拟DOM会进行重新渲染，但并不会马上进行挂载，你可以在这个阶段进行一些操作，比如检查数据的变化。</p>
+<p>更新后：虚拟DOM在重新渲染之后再次应用到实际DOM上面去，这个钩子函数被调用，就可以进行DOM操作</p>
+<p>销毁前：组件销毁前，会触发这个钩子函数，你可以在这个阶段进行一些清理工作，比如说取消订阅、清除定时器、移除事件的监听器</p>
+<p>销毁后：这个函数被调用，组件的方法和数据等都会被清空，无法再进行一个组件的访问</p>
+<p>最后讲解一下数据请求在created和mounted的区别：在这两个阶段进行数据请求都能成功，这两个的本质区别就是，在created进行数据请求的话页面会进行一个闪动，因为这一阶段虚拟DOM还没有完成挂载，虽然两者相比created请求数据更快，但是还是推荐在mounted阶段进行数据请求，因为此时虚拟DOM已经挂载到了实际DOM上面了，操作数据更加的合适。</p>
+<h3 id="2、双向数据绑定是什么？"><a href="#2、双向数据绑定是什么？" class="headerlink" title="2、双向数据绑定是什么？"></a>2、双向数据绑定是什么？</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231113190115773.png" alt="image-20231113190115773"></p>
+<p>双向绑定就是你在页面上的输入框进行输入，底层的数据模型里面的数据也会进行改变，反之亦然。双向绑定的原理是基于MVVM模式的，也就是模型、视图、视图模型，其中视图就是我们所看到的页面，模型主要是指那个数据模型，也就是data。而视图模型是连接两者的桥梁和纽带，数据一旦进行双向绑定，视图模型就会同时对视图和模型进行监视，如果一方进行数据放到更新，视图模型也会将另外一方进行数据的更新，从而实现双向绑定。</p>
+<h3 id="3、Vue组件之间的通信方式都有哪些？"><a href="#3、Vue组件之间的通信方式都有哪些？" class="headerlink" title="3、Vue组件之间的通信方式都有哪些？"></a>3、Vue组件之间的通信方式都有哪些？</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231113194134397.png" alt="image-20231113194134397"></p>
+<p>组件间通信就是组件之间传递数据和和信息，组件通信解决了数据共享、组件复用、跨组件之间的事件的触发、组件之间各种形式的交互。组件间通信分为父子通信、子父通信、兄弟通信、事件总线的消息发布与订阅、Vuex全局状态管理、自定义事件和回调。组件间通信的方案有多种选择，props、ref属性、事件总线的消息发布与订阅、Vuex、插槽等</p>
+<h3 id="4、为什么data属性是一个函数而不是一个对象？"><a href="#4、为什么data属性是一个函数而不是一个对象？" class="headerlink" title="4、为什么data属性是一个函数而不是一个对象？"></a>4、为什么data属性是一个函数而不是一个对象？</h3><p>关于data属性是函数还是对象，这要分情况考虑，在根实例对象（new  Vue（）{}）里面，data属性可以是函数，也可以是对象，不会造成数据污染，因为data只有一个实例，不会进行数据的传递。在组件实例对象(脚手架中的实例)里面只能使用函数，如果使用对象会造成数据污染。现在我来讲一下为什么会造成数据污染，如果使用对象的话，里面的数据是共用一个地址，如果进行组件间数据的传递的话，势必会影响其他的数据，对数据造成一个污染。但是使用函数的话就不会，使用函数的话会返回全新的对象，不会造成一个数据的污染。</p>
+<h3 id="5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？"><a href="#5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？" class="headerlink" title="5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？"></a>5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？</h3><p>如果直接动态添加的话，不会有匹配相对应的getter和setter方法来监听刚刚为data添加的那个属性，也就相当于是一个死的,而不是响应式的。解决方案：使用Vue.set或Vue.$set</p>
+<h3 id="6、v-if和v-for的优先级是什么？"><a href="#6、v-if和v-for的优先级是什么？" class="headerlink" title="6、v-if和v-for的优先级是什么？"></a>6、v-if和v-for的优先级是什么？</h3><p>v-if和v-for都是进行数据渲染的，但是v-if是渲染一条数据，v-for是将整个数组的数据渲染成列表。v-for是不管三七二十一，上来就是遍历，然后渲染数据，但是v-if要先进行判断，然后再根据判断的结果来决定是否进行渲染。如果v-if 和v-for结合使用的话，也是先渲染整个列表，然后再进行判断，如果v-if是false的话，渲染0条数据，但是并不是不渲染。所以综上所述v-for的优先级要高于v-if。</p>
+<h3 id="7、v-show和v-if有什么区别-使用场景分别是什么"><a href="#7、v-show和v-if有什么区别-使用场景分别是什么" class="headerlink" title="7、v-show和v-if有什么区别?使用场景分别是什么?"></a>7、v-show和v-if有什么区别?使用场景分别是什么?</h3><p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231113214912207.png" alt="image-20231113214912207"></p>
+<p>v-show和v-if共同点都是控制元素在页面的显示，但是不同点是，v-show的通过给元素添加display：none来进行显示和隐藏，而v-if是直接把这个dom元素移除dom树。如果需要频繁的切换隐藏和显示的话，建议采用v-show。如果切换次数少，建议采用v-if。</p>
+<h3 id="8、你知道Vue中Key的原理吗？说说你对它的理解？"><a href="#8、你知道Vue中Key的原理吗？说说你对它的理解？" class="headerlink" title="8、你知道Vue中Key的原理吗？说说你对它的理解？"></a>8、你知道Vue中Key的原理吗？说说你对它的理解？</h3><p>Vue中的key是标识每一个节点唯一性的属性，可以帮助Vue更高效的重用和定位节点，尤其是在使用v-for渲染列表的时候，可以准确的匹配新旧节点，可以确保每个节点都能正确地映射到新的数据</p>
+<h3 id="9、说说你对Vue的mixin的理解，有什么应用场景"><a href="#9、说说你对Vue的mixin的理解，有什么应用场景" class="headerlink" title="9、说说你对Vue的mixin的理解，有什么应用场景?"></a>9、说说你对Vue的mixin的理解，有什么应用场景?</h3><p>Vue的mixin其实就是代码的复用，你可以将多次使用的代码抽离出来，在某些组件需要这个‘功能’的时候，将其混入，可以同时混入多个，如果混入中有部分相同，会进行一个合并，而不是简单的覆盖。mixin一般应用于那种具有代码重复的部分，可以有效的增加代码的一个复用</p>
+<h3 id="10、Vue常用的修饰符有哪些有什么应用场景"><a href="#10、Vue常用的修饰符有哪些有什么应用场景" class="headerlink" title="10、Vue常用的修饰符有哪些有什么应用场景"></a>10、Vue常用的修饰符有哪些有什么应用场景</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231114163213639.png" alt="image-20231114163213639"></p>
+<p>vue中的修饰符有表单修饰符、鼠标按键修饰符、键盘修饰符、事件修饰符、系统修饰符。vue中的修饰符其实也就是一些语法糖，是一些操作的简写，通过.XXX等形式使用，可以大大的简化操作，也提高了代码的可读性和可维护性，使得代码更加的灵活</p>
+<h3 id="11、Vue中的-nextTick有什么用？"><a href="#11、Vue中的-nextTick有什么用？" class="headerlink" title="11、Vue中的$nextTick有什么用？"></a>11、Vue中的$nextTick有什么用？</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231114202713218.png" alt="image-20231114202713218"><br>Vue 中的 <code>$nextTick</code> 主要用于确保在下一次 DOM 更新循环结束后执行回调。当你修改数据时，数据的更新和回调函数都被推入微任务队列中，而 <code>$nextTick</code> 则可以让回调函数等待当前微任务队列中的数据更新操作完成，从而确保在下一个微任务执行时执行回调。这对于处理异步操作和获取最新的 DOM 状态非常有用。</p>
+<h3 id="12、Vue实例挂载的过程"><a href="#12、Vue实例挂载的过程" class="headerlink" title="12、Vue实例挂载的过程"></a>12、Vue实例挂载的过程</h3><p>使用new关键字创建一个vue实例，然后使用el将其挂载，当然啦，也可以使用$mount进行挂载，挂载之后可以调用mounted生命周期钩子进行相关操作。</p>
+<h3 id="13、你了解Vue中的diff算法吗？"><a href="#13、你了解Vue中的diff算法吗？" class="headerlink" title="13、你了解Vue中的diff算法吗？"></a>13、你了解Vue中的diff算法吗？</h3><p>diff算法就是利用虚拟DOM的抽象，将新旧虚拟DOM进行对比，记录下需要修改的地方，尽可能找到最小的操作数，然后对其进行修改，最小化对实际DOM进行操作，可以很好的提高页面更新效率。</p>
+<h3 id="14、Vue中组件和插件的区别"><a href="#14、Vue中组件和插件的区别" class="headerlink" title="14、Vue中组件和插件的区别"></a>14、Vue中组件和插件的区别</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231114213437481.png" alt="image-20231114213437481"></p>
+<p>组件是用来构建项目结构的，是项目的一部分，而插件是用来增强或者扩展Vue功能的，插件可以说是一个小个体，这个小个体可以由多个全局的组件、指定、混入等打包形成，只为了提供某些功能，它们的作用范围不同，组件是只负责自己所构建的基本单元，而插件是整个项目的，组件的复用要各种调用，但是插件很简单，因为他只是为了提供某一功能，不负责渲染。注册方式也大有不同，组价的注册可以通过局部注册或者全局注册，但是插件一般需要使用.use进行全局的注册使用</p>
+<h3 id="15、Vue项目中你是如何解决跨域的呢？"><a href="#15、Vue项目中你是如何解决跨域的呢？" class="headerlink" title="15、Vue项目中你是如何解决跨域的呢？"></a>15、Vue项目中你是如何解决跨域的呢？</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="../image/Vue面试题/image-20231115204426136.png" alt="image-20231115204426136"></p>
+<p>Vue项目中的跨域问题的本质问题是浏览器的同源策略，同源策略就是后端和前端的协议号、域名、端口号得一致。解决这个跨域问题，有前端和后端两种解决方法，前端是在config.js中配置proxy，后端是用cors或josnp解决</p>
+<h3 id="16、有写过自定义指令吗-自定义指令的应用场景有哪些"><a href="#16、有写过自定义指令吗-自定义指令的应用场景有哪些" class="headerlink" title="16、有写过自定义指令吗?自定义指令的应用场景有哪些?"></a>16、有写过自定义指令吗?自定义指令的应用场景有哪些?</h3><p>自定义指令就是将一些自定义行为进行封装，关键时候再进行调用，类似于函数，但是又不同于函数，因为自定义指令更关注于DOM的操作和DOM相关的行为，自定义指令还可以设置相对应的生命周期钩子，让其在不同阶段的操作变得更加的顺畅。自定义指令一般应用在DOM操作、权限控制、表单验证等上面。</p>
+<h3 id="17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？"><a href="#17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？" class="headerlink" title="17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？"></a>17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？</h3><p>Vue中的过滤器是在数据进行渲染之前的对数据的处理和格式化的一种函数，过滤器一般用在插值语法<code>&#123;&#123; &#125;&#125;</code>或v-bind指令上面</p>
+<h3 id="18、说说你对slot的理解？slot使用场景有哪些？"><a href="#18、说说你对slot的理解？slot使用场景有哪些？" class="headerlink" title="18、说说你对slot的理解？slot使用场景有哪些？"></a>18、说说你对slot的理解？slot使用场景有哪些？</h3><p>slot也就是vue中的插槽，是一种机制，一般用于父组件向子组件传递自定义的内容，父组件可以根据需求灵活的替换子组件的特定部分，slot具有默认插槽和具名插槽，具名插槽就是具有一个name属性，一般使用在多插槽的情况下，便于区分各个插槽。</p>
+<h3 id="19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？"><a href="#19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？" class="headerlink" title="19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？"></a>19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？</h3><p>虚拟DOM是真实DOM的一个抽象，是一个在内存中维护的树形结构，本质上是一个object对象，虚拟DOM对象中的每一个节点都跟真实DOM对象一一对应，要实现一个虚拟DOM很简单，首先创建虚拟DOM节点，然后将虚拟DOM渲染到真实DOM上面，如果要进行DOM的更新，可以采用diff算法或者深度遍历，找出虚拟DOM和真实DOM之间的区别，将差异部分更新到真实DOM上面，这样可以减少对真实DOM操作，提高性能。</p>
+<h3 id="20、Vue项目中有封装过axios吗？主要封装哪方面的？"><a href="#20、Vue项目中有封装过axios吗？主要封装哪方面的？" class="headerlink" title="20、Vue项目中有封装过axios吗？主要封装哪方面的？"></a>20、Vue项目中有封装过axios吗？主要封装哪方面的？</h3><p>有，axios一般用于封装网络请求，还可以封装统一配置、拦截器、错误处理等</p>
+<h3 id="21、怎么处理Vue中的错误？"><a href="#21、怎么处理Vue中的错误？" class="headerlink" title="21、怎么处理Vue中的错误？"></a>21、怎么处理Vue中的错误？</h3><p>vue中的错误分为同步异常和异步异常，</p>
+<p>同步异常的处理有：try/catch任务流方式、windows.onerror全局对象监听错误回调方法、element.onerror()部分元素的错误返回、Vue.config.errorHander全局组件的异常、errorCaptured可以捕获组件中异常的生命周期钩子函数。</p>
+<p>异步异常有，Windows.onerror全局对象监听、promise中自带的.catch异常处理、Windows.onunhandledrejection全局监听未处理的promise的异常。</p>
+<p>其中Windows.onerror能够处理同步异常，也能 处理异步异常，但主要是处理同步异常，对于处理异步异常的能力相对来说比较弱。</p>
+<h3 id="22、你了解axios的原理吗-有看过它的源码吗？"><a href="#22、你了解axios的原理吗-有看过它的源码吗？" class="headerlink" title="22、你了解axios的原理吗?有看过它的源码吗？"></a>22、你了解axios的原理吗?有看过它的源码吗？</h3><p>axios是基于promise的形成的，主要是用于发送网络请求，但是也可以进行请求拦截、响应拦截、取消请求等。axios底层基于promise，但也不仅仅只是基于promise，它还利用了浏览器环境和nodejs提供的原生功能，通过封装和处理的方式，让开发者更方便进行网络请求。</p>
+<h3 id="23、vue要做权限管理该怎么做？"><a href="#23、vue要做权限管理该怎么做？" class="headerlink" title="23、vue要做权限管理该怎么做？"></a>23、vue要做权限管理该怎么做？</h3><p>Vue中的权限管理有：路由权限（路由守卫）、组件级权限控制（组件内部根据权限来决定某些功能或模块的显示和隐藏）、动态路由（会有一个路由表，根据权限来决定是否加载某些组件）、指令权限（通过编写自定义指令来控制元素的显示和隐藏）、按钮权限控制（给按钮加上权限，只有权限达到要求的才可以看见或者点击某个按钮）。具体要实现一个权限管理，首先要确定角色和权限的一个定义，在根据这些去进行一个更加详细的一个权限设置。</p>
+<h3 id="24、说说你对keep-alive的理解是什么？"><a href="#24、说说你对keep-alive的理解是什么？" class="headerlink" title="24、说说你对keep-alive的理解是什么？"></a>24、说说你对keep-alive的理解是什么？</h3><p>keep-alive是vue中的一个内置组件，也是一种内部机制，可以对暂时不使用的组件进行一个缓存，而不是直接的销毁。如果需要对缓存的组件进行重新调用keep-alive也提供了相对应的钩子函数（activated)，能保证组件进行一个灵活的缓存（deactivated)和激活调用（activated)。</p>
+<h3 id="25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？"><a href="#25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？" class="headerlink" title="25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？"></a>25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？</h3><p>SPA单页面就是把所有资源集中到一个页面，优点是可以减少一个页面的刷新让用户用起来更加流畅，还可以减少服务器的一个压力（无需每次刷新都渲染整个页面），缺点是首次加载速度过慢。至于如何实现一个SPA应用，首先选择一个合适的前端框架(就比如说Vue)，配置相对应的路由管理，状态管理（vue中使用Vuex），组件化开发（可以更好的管理每一部分）、异步加载（懒加载，可以减低浏览器的一个性能），与后端api进行交互（从后端的api调取数据进行一个前端数据的渲染）。</p>
+<h3 id="26、SPA的首屏加载慢怎么解决？"><a href="#26、SPA的首屏加载慢怎么解决？" class="headerlink" title="26、SPA的首屏加载慢怎么解决？"></a>26、SPA的首屏加载慢怎么解决？</h3><p>SPA首屏加载之所以慢，是因为首屏加载需要加载很多内容，（1）资源加载方面，我们可以采取懒加载模式，也就是目前所需要用到的先进行一个简单的加载，暂时不使用的可以先不进行一个加载。还可以采取服务器加速，将比较占内存的，渲染速度慢的，就比如说高清照片，可以放在服务器或者图床进行一个加速，可以提高首屏加载的一个速率。（2）在代码方面可以进行一个代码的拆分、代码的优化、使用压缩工具对代码的一个简单的压缩（3）网络方面可以采用一个CDN加速 或者网络协议的优化。</p>
+<h3 id="27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？"><a href="#27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？" class="headerlink" title="27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？"></a>27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？</h3><p>第一种原因是路由的配置问题，检查路由配置使用的是否是history模式，而不是hash模式。第二种原因是路径的大小写问题，确保文件路径大小也一致。第三种原因是基础路径的问题，如果你在vue.config.js中配置publicPath，请确保他的指向是正确的。</p>
+<h3 id="28、SSR解决了什么问题-有做过SSR吗-你是怎么做的"><a href="#28、SSR解决了什么问题-有做过SSR吗-你是怎么做的" class="headerlink" title="28、SSR解决了什么问题?有做过SSR吗?你是怎么做的?"></a>28、SSR解决了什么问题?有做过SSR吗?你是怎么做的?</h3><p>SSR不同于传统的客户端渲染，它是服务器端的一个渲染。它能很好使的解决SPA单页面应用的一个首屏加载缓慢或者加载白屏的问题，同时也进行了一个SEO的优化，便于爬虫进行爬取，这样可以提高网站的搜索引擎的排名。至于如何实现SSR，我们首先要选择一个支持SSR的框架，将数据等存储到服务器，在前端页面使用合适的生命钩子（mounted）进行激活调用，从而完成渲染。</p>
+<h3 id="29、vue3有了解过吗-能说说跟vue2的区别吗"><a href="#29、vue3有了解过吗-能说说跟vue2的区别吗" class="headerlink" title="29、vue3有了解过吗?能说说跟vue2的区别吗?"></a>29、vue3有了解过吗?能说说跟vue2的区别吗?</h3><h4 id="1-性能优化："><a href="#1-性能优化：" class="headerlink" title="1. 性能优化："></a>1. <strong>性能优化：</strong></h4><ul>
+<li><strong>响应式系统重写：</strong> Vue 3 中的响应式系统通过使用 Proxy 取代 Object.defineProperty 实现，提高了性能，使得更多的场景下能够更高效地追踪状态的变化。</li>
+<li><strong>编译优化：</strong> Vue 3 的编译器进行了重写，生成的代码更小，运行时性能更好。</li>
+</ul>
+<h4 id="2-组合式-API："><a href="#2-组合式-API：" class="headerlink" title="2. 组合式 API："></a>2. <strong>组合式 API：</strong></h4><ul>
+<li><strong>Composition API：</strong> Vue 3 引入了 Composition API，允许开发者更灵活地组织组件逻辑，尤其是对于复杂组件，代码可读性和维护性得到提升。</li>
+</ul>
+<h4 id="3-Teleport："><a href="#3-Teleport：" class="headerlink" title="3. Teleport："></a>3. <strong>Teleport：</strong></h4><ul>
+<li><strong>Teleport 组件：</strong> Vue 3 引入了 Teleport 组件，使得在组件内的任何地方渲染内容到 DOM 中的其他位置变得更加容易。</li>
+</ul>
+<h4 id="4-Suspense："><a href="#4-Suspense：" class="headerlink" title="4. Suspense："></a>4. <strong>Suspense：</strong></h4><ul>
+<li><strong>Suspense：</strong> Vue 3 中引入了 Suspense 组件，使得处理异步组件和代码分割更加容易，并提供更好的用户体验。</li>
+</ul>
+<h4 id="5-多根节点支持："><a href="#5-多根节点支持：" class="headerlink" title="5. 多根节点支持："></a>5. <strong>多根节点支持：</strong></h4><ul>
+<li><strong>单文件组件多根节点：</strong> 在 Vue 3 的单文件组件中，可以直接包含多个根节点而无需使用额外的包装元素。</li>
+</ul>
+<h4 id="6-Fragment-和-Portals："><a href="#6-Fragment-和-Portals：" class="headerlink" title="6. Fragment 和 Portals："></a>6. <strong>Fragment 和 Portals：</strong></h4><ul>
+<li><strong>Fragment 和 Portals：</strong> Vue 3 支持使用 Fragment（<code>&lt;template&gt;</code>）来包裹多个根节点，以及使用 Portals 来在组件树之外渲染内容。</li>
+</ul>
+<h4 id="7-全局-API-的改进："><a href="#7-全局-API-的改进：" class="headerlink" title="7. 全局 API 的改进："></a>7. <strong>全局 API 的改进：</strong></h4><ul>
+<li><strong>全局 API 改进：</strong> Vue 3 中对全局 API 进行了调整和改进，例如，创建应用实例的方式发生了变化。</li>
+</ul>
+<h4 id="8-Typescript-支持："><a href="#8-Typescript-支持：" class="headerlink" title="8. Typescript 支持："></a>8. <strong>Typescript 支持：</strong></h4><ul>
+<li><strong>Typescript 支持：</strong> Vue 3 在设计上更加友好地支持 TypeScript，提供了更好的类型推导和支持。</li>
+</ul>
+<h4 id="9-其他改进："><a href="#9-其他改进：" class="headerlink" title="9. 其他改进："></a>9. <strong>其他改进：</strong></h4><ul>
+<li><strong>更小的体积：</strong> Vue 3 的体积相比 Vue 2 更小。</li>
+<li><strong>更好的 TypeScript 支持：</strong> Vue 3 提供了更好的 TypeScript 支持，包括更准确的类型推断。</li>
+<li><strong>更好的调试体验：</strong> Vue 3 改进了开发者工具，提供了更好的调试体验。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://fuchengya.github.io">浮城</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://fuchengya.github.io/posts/a424f2dd.html">http://fuchengya.github.io/posts/a424f2dd.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://fuchengya.github.io" target="_blank">浮城</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a><a class="post-meta__tags" href="/tags/Vue/">Vue</a></div><div class="post_share"><div class="social-share" data-image="/../image/Vue%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231113164718448.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/css/coin/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">无甜不乖，少糖捣蛋</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></button></div><audio id="coinAudio" src="https://cdn.cbd.int/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer="defer" src="/js/coin/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/3b5bdfda.html" title="CSS面试题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231117162042710.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">CSS面试题</div></div></a></div><div class="next-post pull-right"><a href="/posts/7c19f57d.html" title="命题说话思路"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/%E5%91%BD%E9%A2%98%E8%AF%B4%E8%AF%9D%E6%80%9D%E8%B7%AF/image-20231104101907140.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">命题说话思路</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/db5a5ee4.html" title="Vue2脚手架"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/Vue-cli/bg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-15</div><div class="title">Vue2脚手架</div></div></a></div><div><a href="/posts/3b5bdfda.html" title="CSS面试题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231117162042710.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-17</div><div class="title">CSS面试题</div></div></a></div><div><a href="/posts/3a213ca.html" title="JavaScript面试题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/JavaScript%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231204151855513.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-04</div><div class="title">JavaScript面试题</div></div></a></div><div><a href="/posts/48573e77.html" title="Promise面试题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/promise%E9%9D%A2%E8%AF%95%E9%A2%98/image-20231101221655497.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-01</div><div class="title">Promise面试题</div></div></a></div><div><a href="/posts/8efb004d.html" title="Vue3精简版"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/Vue3%E7%B2%BE%E7%AE%80%E7%89%88/image-20231022223400140.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-16</div><div class="title">Vue3精简版</div></div></a></div><div><a href="/posts/6fa67ee1.html" title="Vue3详细版"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/Vue3%E8%AF%A6%E7%BB%86%E7%89%88/image-20231022180613556.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-16</div><div class="title">Vue3详细版</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t3.picb.cc/2023/08/09/I9ZjKd.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">浮城</div><div class="author-info__description">飘零浮城心彷徨，红尘烟火梦中荡。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AE%B2%E4%B8%80%E4%B8%8B%E4%BD%A0%E5%AF%B9Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">1、讲一下你对Vue生命周期的理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">2、双向数据绑定是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3、Vue组件之间的通信方式都有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88data%E5%B1%9E%E6%80%A7%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%80%8C%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">4、为什么data属性是一个函数而不是一个对象？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%8A%A8%E6%80%81%E7%BB%99Vue%E7%9A%84data%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E6%97%B6%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88%EF%BC%9F%E6%80%8E%E6%A0%B7%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81v-if%E5%92%8Cv-for%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">6、v-if和v-for的优先级是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81v-show%E5%92%8Cv-if%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">7.</span> <span class="toc-text">7、v-show和v-if有什么区别?使用场景分别是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E4%BD%A0%E7%9F%A5%E9%81%93Vue%E4%B8%ADKey%E7%9A%84%E5%8E%9F%E7%90%86%E5%90%97%EF%BC%9F%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9%E5%AE%83%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">8、你知道Vue中Key的原理吗？说说你对它的理解？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9Vue%E7%9A%84mixin%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">9.</span> <span class="toc-text">9、说说你对Vue的mixin的理解，有什么应用场景?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81Vue%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BF%AE%E9%A5%B0%E7%AC%A6%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">10.</span> <span class="toc-text">10、Vue常用的修饰符有哪些有什么应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E3%80%81Vue%E4%B8%AD%E7%9A%84-nextTick%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">11、Vue中的$nextTick有什么用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E3%80%81Vue%E5%AE%9E%E4%BE%8B%E6%8C%82%E8%BD%BD%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-number">12.</span> <span class="toc-text">12、Vue实例挂载的过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E3%80%81%E4%BD%A0%E4%BA%86%E8%A7%A3Vue%E4%B8%AD%E7%9A%84diff%E7%AE%97%E6%B3%95%E5%90%97%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">13、你了解Vue中的diff算法吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14%E3%80%81Vue%E4%B8%AD%E7%BB%84%E4%BB%B6%E5%92%8C%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">14.</span> <span class="toc-text">14、Vue中组件和插件的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15%E3%80%81Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E7%9A%84%E5%91%A2%EF%BC%9F"><span class="toc-number">15.</span> <span class="toc-text">15、Vue项目中你是如何解决跨域的呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16%E3%80%81%E6%9C%89%E5%86%99%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E5%90%97-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">16.</span> <span class="toc-text">16、有写过自定义指令吗?自定义指令的应用场景有哪些?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17%E3%80%81Vue%E4%B8%AD%E7%9A%84%E8%BF%87%E6%BB%A4%E5%99%A8%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">17.</span> <span class="toc-text">17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18%E3%80%81%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9slot%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9Fslot%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">18.</span> <span class="toc-text">18、说说你对slot的理解？slot使用场景有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9FDOM%EF%BC%9F%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E8%99%9A%E6%8B%9FDOM%EF%BC%9F%E8%AF%B4%E8%AF%B4%E4%BD%A0%E7%9A%84%E6%80%9D%E8%B7%AF%EF%BC%9F"><span class="toc-number">19.</span> <span class="toc-text">19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20%E3%80%81Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%9C%89%E5%B0%81%E8%A3%85%E8%BF%87axios%E5%90%97%EF%BC%9F%E4%B8%BB%E8%A6%81%E5%B0%81%E8%A3%85%E5%93%AA%E6%96%B9%E9%9D%A2%E7%9A%84%EF%BC%9F"><span class="toc-number">20.</span> <span class="toc-text">20、Vue项目中有封装过axios吗？主要封装哪方面的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21%E3%80%81%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86Vue%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%EF%BC%9F"><span class="toc-number">21.</span> <span class="toc-text">21、怎么处理Vue中的错误？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22%E3%80%81%E4%BD%A0%E4%BA%86%E8%A7%A3axios%E7%9A%84%E5%8E%9F%E7%90%86%E5%90%97-%E6%9C%89%E7%9C%8B%E8%BF%87%E5%AE%83%E7%9A%84%E6%BA%90%E7%A0%81%E5%90%97%EF%BC%9F"><span class="toc-number">22.</span> <span class="toc-text">22、你了解axios的原理吗?有看过它的源码吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23%E3%80%81vue%E8%A6%81%E5%81%9A%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%A5%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-number">23.</span> <span class="toc-text">23、vue要做权限管理该怎么做？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24%E3%80%81%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9keep-alive%E7%9A%84%E7%90%86%E8%A7%A3%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">24.</span> <span class="toc-text">24、说说你对keep-alive的理解是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25%E3%80%81%E4%BD%A0%E5%AF%B9SPA%E5%8D%95%E9%A1%B5%E9%9D%A2%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%8C%E5%AE%83%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0SPA%E5%BA%94%E7%94%A8%EF%BC%9F"><span class="toc-number">25.</span> <span class="toc-text">25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26%E3%80%81SPA%E7%9A%84%E9%A6%96%E5%B1%8F%E5%8A%A0%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-number">26.</span> <span class="toc-text">26、SPA的首屏加载慢怎么解决？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27%E3%80%81Vue%E9%A1%B9%E7%9B%AE%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E5%AE%8C%E6%88%90%E5%90%8E%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E6%8A%A5404%E6%98%AF%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9B%A0%E5%91%A2%EF%BC%9F"><span class="toc-number">27.</span> <span class="toc-text">27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28%E3%80%81SSR%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98-%E6%9C%89%E5%81%9A%E8%BF%87SSR%E5%90%97-%E4%BD%A0%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E7%9A%84"><span class="toc-number">28.</span> <span class="toc-text">28、SSR解决了什么问题?有做过SSR吗?你是怎么做的?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29%E3%80%81vue3%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87%E5%90%97-%E8%83%BD%E8%AF%B4%E8%AF%B4%E8%B7%9Fvue2%E7%9A%84%E5%8C%BA%E5%88%AB%E5%90%97"><span class="toc-number">29.</span> <span class="toc-text">29、vue3有了解过吗?能说说跟vue2的区别吗?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A"><span class="toc-number">29.1.</span> <span class="toc-text">1. 性能优化：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%BB%84%E5%90%88%E5%BC%8F-API%EF%BC%9A"><span class="toc-number">29.2.</span> <span class="toc-text">2. 组合式 API：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Teleport%EF%BC%9A"><span class="toc-number">29.3.</span> <span class="toc-text">3. Teleport：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Suspense%EF%BC%9A"><span class="toc-number">29.4.</span> <span class="toc-text">4. Suspense：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%A4%9A%E6%A0%B9%E8%8A%82%E7%82%B9%E6%94%AF%E6%8C%81%EF%BC%9A"><span class="toc-number">29.5.</span> <span class="toc-text">5. 多根节点支持：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-Fragment-%E5%92%8C-Portals%EF%BC%9A"><span class="toc-number">29.6.</span> <span class="toc-text">6. Fragment 和 Portals：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%85%A8%E5%B1%80-API-%E7%9A%84%E6%94%B9%E8%BF%9B%EF%BC%9A"><span class="toc-number">29.7.</span> <span class="toc-text">7. 全局 API 的改进：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-Typescript-%E6%94%AF%E6%8C%81%EF%BC%9A"><span class="toc-number">29.8.</span> <span class="toc-text">8. Typescript 支持：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E5%85%B6%E4%BB%96%E6%94%B9%E8%BF%9B%EF%BC%9A"><span class="toc-number">29.9.</span> <span class="toc-text">9. 其他改进：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/df384fad.html" title="言语理解与表达"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/5834f92ab06f224569e44b815664948e_3_800x450.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="言语理解与表达"/></a><div class="content"><a class="title" href="/posts/df384fad.html" title="言语理解与表达">言语理解与表达</a><time datetime="2025-02-09T04:21:29.000Z" title="发表于 2025-02-09 12:21:29">2025-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dfee96f3.html" title="判断推理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/f7642ecef52d38f0d20bb458050ba651.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="判断推理"/></a><div class="content"><a class="title" href="/posts/dfee96f3.html" title="判断推理">判断推理</a><time datetime="2025-01-27T08:41:06.000Z" title="发表于 2025-01-27 16:41:06">2025-01-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9362be7c.html" title="资料分析"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/%E8%B5%84%E6%96%99%E5%88%86%E6%9E%90/5834f92ab06f224569e44b815664948e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="资料分析"/></a><div class="content"><a class="title" href="/posts/9362be7c.html" title="资料分析">资料分析</a><time datetime="2025-01-02T05:52:31.000Z" title="发表于 2025-01-02 13:52:31">2025-01-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/444092dd.html" title="数量关系"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/%C2%B7%E6%95%B0%E9%87%8F%E5%85%B3%E7%B3%BB/0312a106d2beec81a146b15fe53e8220.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数量关系"/></a><div class="content"><a class="title" href="/posts/444092dd.html" title="数量关系">数量关系</a><time datetime="2024-12-14T00:50:31.000Z" title="发表于 2024-12-14 08:50:31">2024-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4026791c.html" title="引脚"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../image/%E5%BC%95%E8%84%9A/0cf722b6c5331f40c1db30a64ce05f8d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="引脚"/></a><div class="content"><a class="title" href="/posts/4026791c.html" title="引脚">引脚</a><time datetime="2024-11-30T06:47:17.000Z" title="发表于 2024-11-30 14:47:17">2024-11-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 浮城</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://fucheng-twikoo.fuchengya.com/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://fucheng-twikoo.fuchengya.com/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><div class="aplayer no-destroy" data-id="2685449094" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/sakura.js"></script><script src="/js/DynamicTitles.js"></script><script src="/js/sun_moon.js" async></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div><div class="app-refresh" id="app-refresh" style="position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;"><div class="app-refresh-wrap" style=" display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;"><label>✨ 有新文章啦！ 👉</label><a href="javascript:void(0)" onclick="location.reload()"><span style="color: #fff;text-decoration: underline;cursor: pointer;">🍗点击食用🍔</span></a></div></div><script>if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker.controller) {
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+showNotification()
+})
+}
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('/sw.js')
+})
+}
+function showNotification() {
+if (GLOBAL_CONFIG.Snackbar) {
+var snackbarBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+GLOBAL_CONFIG.Snackbar.bgLight :
+GLOBAL_CONFIG.Snackbar.bgDark
+var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+Snackbar.show({
+text: '✨ 有新文章啦！ 👉',
+backgroundColor: snackbarBg,
+duration: 500000,
+pos: snackbarPos,
+actionText: '🍗点击食用🍔',
+actionTextColor: '#fff',
+onActionClick: function(e) {
+location.reload()
+},
+})
+} else {
+var showBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+'#3b70fc' :
+'#1f1f1f'
+var cssText = `top: 0; background: ${showBg};`
+document.getElementById('app-refresh').style.cssText = cssText
+}
+}</script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.1.8/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.6534116,27.96920845';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.1.8/lib/clock.min.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
