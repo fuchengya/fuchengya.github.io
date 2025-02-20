@@ -6,7 +6,7 @@
   <link href="http://fuchengya.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuchengya.github.io/"/>
-  <updated>2025-02-20T12:07:30.793Z</updated>
+  <updated>2025-02-20T12:37:25.925Z</updated>
   <id>http://fuchengya.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>申论</title>
+    <link href="http://fuchengya.github.io/posts/2d03a0d0.html"/>
+    <id>http://fuchengya.github.io/posts/2d03a0d0.html</id>
+    <published>2025-02-20T12:28:45.000Z</published>
+    <updated>2025-02-20T12:37:25.925Z</updated>
+    
+    
+    
+    
+    <category term="国家公务员考试" scheme="http://fuchengya.github.io/categories/%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E8%AF%95/"/>
+    
+    
+    <category term="申论" scheme="http://fuchengya.github.io/tags/%E7%94%B3%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>言语理解与表达</title>
@@ -468,9 +485,9 @@
     <category term="JavaScript" scheme="http://fuchengya.github.io/categories/JavaScript/"/>
     
     
-    <category term="JavaScript" scheme="http://fuchengya.github.io/tags/JavaScript/"/>
-    
     <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="JavaScript" scheme="http://fuchengya.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -496,37 +513,9 @@
     <category term="CSS" scheme="http://fuchengya.github.io/categories/CSS/"/>
     
     
-    <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
     <category term="CSS" scheme="http://fuchengya.github.io/tags/CSS/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Vue面试题</title>
-    <link href="http://fuchengya.github.io/posts/a424f2dd.html"/>
-    <id>http://fuchengya.github.io/posts/a424f2dd.html</id>
-    <published>2023-11-13T08:24:48.000Z</published>
-    <updated>2023-11-17T07:01:03.120Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1、讲一下你对Vue生命周期的理解"><a href="#1、讲一下你对Vue生命周期的理解" class="headerlink" title="1、讲一下你对Vue生命周期的理解"></a>1、讲一下你对Vue生命周期的理解</h3><p><img src="../image/Vue面试题/image-20231113180459687.png" alt="image-20231113180459687"></p><p>首先来谈谈生命周期是什么，可以通俗的理解成“人的一生”，从出生到死亡是人的一生，也是一个完整的生命周期。Vue中的生命周期具有8个阶段，创建前后、挂载前后、更新前后、销毁前后。</p><p>创建前：组件实例被创建，但是没有初始化数据和方法，data和methods还是空的。</p><p>创建后：组件实例已经成功初始化，data和methods已经准备好了，你可以在这个阶段进行数据的初始化和异步操作。</p><p>挂载前：创建虚拟DOM但是不进行挂载，你可以这个阶段执行一些操作用来准备渲染。</p><p>挂载后：虚拟DOM中的组件已经被挂载到实际DOM上面去了，可以在这一阶段对DOM元素进行操作。更新前：</p><p>更新前：数据发生改变时，就会触发这个生命周期钩子函数，触发之后虚拟DOM会进行重新渲染，但并不会马上进行挂载，你可以在这个阶段进行一些操作，比如检查数据的变化。</p><p>更新后：虚拟DOM在重新渲染之后再次应用到实际DOM上面去，这个钩子函数被调用，就可以进行DOM操作</p><p>销毁前：组件销毁前，会触发这个钩子函数，你可以在这个阶段进行一些清理工作，比如说取消订阅、清除定时器、移除事件的监听器</p><p>销毁后：这个函数被调用，组件的方法和数据等都会被清空，无法再进行一个组件的访问</p><p>最后讲解一下数据请求在created和mounted的区别：在这两个阶段进行数据请求都能成功，这两个的本质区别就是，在created进行数据请求的话页面会进行一个闪动，因为这一阶段虚拟DOM还没有完成挂载，虽然两者相比created请求数据更快，但是还是推荐在mounted阶段进行数据请求，因为此时虚拟DOM已经挂载到了实际DOM上面了，操作数据更加的合适。</p><h3 id="2、双向数据绑定是什么？"><a href="#2、双向数据绑定是什么？" class="headerlink" title="2、双向数据绑定是什么？"></a>2、双向数据绑定是什么？</h3><p><img src="../image/Vue面试题/image-20231113190115773.png" alt="image-20231113190115773"></p><p>双向绑定就是你在页面上的输入框进行输入，底层的数据模型里面的数据也会进行改变，反之亦然。双向绑定的原理是基于MVVM模式的，也就是模型、视图、视图模型，其中视图就是我们所看到的页面，模型主要是指那个数据模型，也就是data。而视图模型是连接两者的桥梁和纽带，数据一旦进行双向绑定，视图模型就会同时对视图和模型进行监视，如果一方进行数据放到更新，视图模型也会将另外一方进行数据的更新，从而实现双向绑定。</p><h3 id="3、Vue组件之间的通信方式都有哪些？"><a href="#3、Vue组件之间的通信方式都有哪些？" class="headerlink" title="3、Vue组件之间的通信方式都有哪些？"></a>3、Vue组件之间的通信方式都有哪些？</h3><p><img src="../image/Vue面试题/image-20231113194134397.png" alt="image-20231113194134397"></p><p>组件间通信就是组件之间传递数据和和信息，组件通信解决了数据共享、组件复用、跨组件之间的事件的触发、组件之间各种形式的交互。组件间通信分为父子通信、子父通信、兄弟通信、事件总线的消息发布与订阅、Vuex全局状态管理、自定义事件和回调。组件间通信的方案有多种选择，props、ref属性、事件总线的消息发布与订阅、Vuex、插槽等</p><h3 id="4、为什么data属性是一个函数而不是一个对象？"><a href="#4、为什么data属性是一个函数而不是一个对象？" class="headerlink" title="4、为什么data属性是一个函数而不是一个对象？"></a>4、为什么data属性是一个函数而不是一个对象？</h3><p>关于data属性是函数还是对象，这要分情况考虑，在根实例对象（new  Vue（）{}）里面，data属性可以是函数，也可以是对象，不会造成数据污染，因为data只有一个实例，不会进行数据的传递。在组件实例对象(脚手架中的实例)里面只能使用函数，如果使用对象会造成数据污染。现在我来讲一下为什么会造成数据污染，如果使用对象的话，里面的数据是共用一个地址，如果进行组件间数据的传递的话，势必会影响其他的数据，对数据造成一个污染。但是使用函数的话就不会，使用函数的话会返回全新的对象，不会造成一个数据的污染。</p><h3 id="5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？"><a href="#5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？" class="headerlink" title="5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？"></a>5、动态给Vue的data添加一个新的属性时会发生什么？怎样解决？</h3><p>如果直接动态添加的话，不会有匹配相对应的getter和setter方法来监听刚刚为data添加的那个属性，也就相当于是一个死的,而不是响应式的。解决方案：使用Vue.set或Vue.$set</p><h3 id="6、v-if和v-for的优先级是什么？"><a href="#6、v-if和v-for的优先级是什么？" class="headerlink" title="6、v-if和v-for的优先级是什么？"></a>6、v-if和v-for的优先级是什么？</h3><p>v-if和v-for都是进行数据渲染的，但是v-if是渲染一条数据，v-for是将整个数组的数据渲染成列表。v-for是不管三七二十一，上来就是遍历，然后渲染数据，但是v-if要先进行判断，然后再根据判断的结果来决定是否进行渲染。如果v-if 和v-for结合使用的话，也是先渲染整个列表，然后再进行判断，如果v-if是false的话，渲染0条数据，但是并不是不渲染。所以综上所述v-for的优先级要高于v-if。</p><h3 id="7、v-show和v-if有什么区别-使用场景分别是什么"><a href="#7、v-show和v-if有什么区别-使用场景分别是什么" class="headerlink" title="7、v-show和v-if有什么区别?使用场景分别是什么?"></a>7、v-show和v-if有什么区别?使用场景分别是什么?</h3><p> <img src="../image/Vue面试题/image-20231113214912207.png" alt="image-20231113214912207"></p><p>v-show和v-if共同点都是控制元素在页面的显示，但是不同点是，v-show的通过给元素添加display：none来进行显示和隐藏，而v-if是直接把这个dom元素移除dom树。如果需要频繁的切换隐藏和显示的话，建议采用v-show。如果切换次数少，建议采用v-if。</p><h3 id="8、你知道Vue中Key的原理吗？说说你对它的理解？"><a href="#8、你知道Vue中Key的原理吗？说说你对它的理解？" class="headerlink" title="8、你知道Vue中Key的原理吗？说说你对它的理解？"></a>8、你知道Vue中Key的原理吗？说说你对它的理解？</h3><p>Vue中的key是标识每一个节点唯一性的属性，可以帮助Vue更高效的重用和定位节点，尤其是在使用v-for渲染列表的时候，可以准确的匹配新旧节点，可以确保每个节点都能正确地映射到新的数据</p><h3 id="9、说说你对Vue的mixin的理解，有什么应用场景"><a href="#9、说说你对Vue的mixin的理解，有什么应用场景" class="headerlink" title="9、说说你对Vue的mixin的理解，有什么应用场景?"></a>9、说说你对Vue的mixin的理解，有什么应用场景?</h3><p>Vue的mixin其实就是代码的复用，你可以将多次使用的代码抽离出来，在某些组件需要这个‘功能’的时候，将其混入，可以同时混入多个，如果混入中有部分相同，会进行一个合并，而不是简单的覆盖。mixin一般应用于那种具有代码重复的部分，可以有效的增加代码的一个复用</p><h3 id="10、Vue常用的修饰符有哪些有什么应用场景"><a href="#10、Vue常用的修饰符有哪些有什么应用场景" class="headerlink" title="10、Vue常用的修饰符有哪些有什么应用场景"></a>10、Vue常用的修饰符有哪些有什么应用场景</h3><p><img src="../image/Vue面试题/image-20231114163213639.png" alt="image-20231114163213639"></p><p>vue中的修饰符有表单修饰符、鼠标按键修饰符、键盘修饰符、事件修饰符、系统修饰符。vue中的修饰符其实也就是一些语法糖，是一些操作的简写，通过.XXX等形式使用，可以大大的简化操作，也提高了代码的可读性和可维护性，使得代码更加的灵活</p><h3 id="11、Vue中的-nextTick有什么用？"><a href="#11、Vue中的-nextTick有什么用？" class="headerlink" title="11、Vue中的$nextTick有什么用？"></a>11、Vue中的$nextTick有什么用？</h3><p><img src="../image/Vue面试题/image-20231114202713218.png" alt="image-20231114202713218"><br>Vue 中的 <code>$nextTick</code> 主要用于确保在下一次 DOM 更新循环结束后执行回调。当你修改数据时，数据的更新和回调函数都被推入微任务队列中，而 <code>$nextTick</code> 则可以让回调函数等待当前微任务队列中的数据更新操作完成，从而确保在下一个微任务执行时执行回调。这对于处理异步操作和获取最新的 DOM 状态非常有用。</p><h3 id="12、Vue实例挂载的过程"><a href="#12、Vue实例挂载的过程" class="headerlink" title="12、Vue实例挂载的过程"></a>12、Vue实例挂载的过程</h3><p>使用new关键字创建一个vue实例，然后使用el将其挂载，当然啦，也可以使用$mount进行挂载，挂载之后可以调用mounted生命周期钩子进行相关操作。</p><h3 id="13、你了解Vue中的diff算法吗？"><a href="#13、你了解Vue中的diff算法吗？" class="headerlink" title="13、你了解Vue中的diff算法吗？"></a>13、你了解Vue中的diff算法吗？</h3><p>diff算法就是利用虚拟DOM的抽象，将新旧虚拟DOM进行对比，记录下需要修改的地方，尽可能找到最小的操作数，然后对其进行修改，最小化对实际DOM进行操作，可以很好的提高页面更新效率。</p><h3 id="14、Vue中组件和插件的区别"><a href="#14、Vue中组件和插件的区别" class="headerlink" title="14、Vue中组件和插件的区别"></a>14、Vue中组件和插件的区别</h3><p><img src="../image/Vue面试题/image-20231114213437481.png" alt="image-20231114213437481"></p><p>组件是用来构建项目结构的，是项目的一部分，而插件是用来增强或者扩展Vue功能的，插件可以说是一个小个体，这个小个体可以由多个全局的组件、指定、混入等打包形成，只为了提供某些功能，它们的作用范围不同，组件是只负责自己所构建的基本单元，而插件是整个项目的，组件的复用要各种调用，但是插件很简单，因为他只是为了提供某一功能，不负责渲染。注册方式也大有不同，组价的注册可以通过局部注册或者全局注册，但是插件一般需要使用.use进行全局的注册使用</p><h3 id="15、Vue项目中你是如何解决跨域的呢？"><a href="#15、Vue项目中你是如何解决跨域的呢？" class="headerlink" title="15、Vue项目中你是如何解决跨域的呢？"></a>15、Vue项目中你是如何解决跨域的呢？</h3><p><img src="../image/Vue面试题/image-20231115204426136.png" alt="image-20231115204426136"></p><p>Vue项目中的跨域问题的本质问题是浏览器的同源策略，同源策略就是后端和前端的协议号、域名、端口号得一致。解决这个跨域问题，有前端和后端两种解决方法，前端是在config.js中配置proxy，后端是用cors或josnp解决</p><h3 id="16、有写过自定义指令吗-自定义指令的应用场景有哪些"><a href="#16、有写过自定义指令吗-自定义指令的应用场景有哪些" class="headerlink" title="16、有写过自定义指令吗?自定义指令的应用场景有哪些?"></a>16、有写过自定义指令吗?自定义指令的应用场景有哪些?</h3><p>自定义指令就是将一些自定义行为进行封装，关键时候再进行调用，类似于函数，但是又不同于函数，因为自定义指令更关注于DOM的操作和DOM相关的行为，自定义指令还可以设置相对应的生命周期钩子，让其在不同阶段的操作变得更加的顺畅。自定义指令一般应用在DOM操作、权限控制、表单验证等上面。</p><h3 id="17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？"><a href="#17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？" class="headerlink" title="17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？"></a>17、Vue中的过滤器了解吗？过滤器的应用场景有哪些？</h3><p>Vue中的过滤器是在数据进行渲染之前的对数据的处理和格式化的一种函数，过滤器一般用在插值语法<code>&#123;&#123; &#125;&#125;</code>或v-bind指令上面</p><h3 id="18、说说你对slot的理解？slot使用场景有哪些？"><a href="#18、说说你对slot的理解？slot使用场景有哪些？" class="headerlink" title="18、说说你对slot的理解？slot使用场景有哪些？"></a>18、说说你对slot的理解？slot使用场景有哪些？</h3><p>slot也就是vue中的插槽，是一种机制，一般用于父组件向子组件传递自定义的内容，父组件可以根据需求灵活的替换子组件的特定部分，slot具有默认插槽和具名插槽，具名插槽就是具有一个name属性，一般使用在多插槽的情况下，便于区分各个插槽。</p><h3 id="19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？"><a href="#19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？" class="headerlink" title="19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？"></a>19、什么是虚拟DOM？如何实现一个虚拟DOM？说说你的思路？</h3><p>虚拟DOM是真实DOM的一个抽象，是一个在内存中维护的树形结构，本质上是一个object对象，虚拟DOM对象中的每一个节点都跟真实DOM对象一一对应，要实现一个虚拟DOM很简单，首先创建虚拟DOM节点，然后将虚拟DOM渲染到真实DOM上面，如果要进行DOM的更新，可以采用diff算法或者深度遍历，找出虚拟DOM和真实DOM之间的区别，将差异部分更新到真实DOM上面，这样可以减少对真实DOM操作，提高性能。</p><h3 id="20、Vue项目中有封装过axios吗？主要封装哪方面的？"><a href="#20、Vue项目中有封装过axios吗？主要封装哪方面的？" class="headerlink" title="20、Vue项目中有封装过axios吗？主要封装哪方面的？"></a>20、Vue项目中有封装过axios吗？主要封装哪方面的？</h3><p>有，axios一般用于封装网络请求，还可以封装统一配置、拦截器、错误处理等</p><h3 id="21、怎么处理Vue中的错误？"><a href="#21、怎么处理Vue中的错误？" class="headerlink" title="21、怎么处理Vue中的错误？"></a>21、怎么处理Vue中的错误？</h3><p>vue中的错误分为同步异常和异步异常，</p><p>同步异常的处理有：try/catch任务流方式、windows.onerror全局对象监听错误回调方法、element.onerror()部分元素的错误返回、Vue.config.errorHander全局组件的异常、errorCaptured可以捕获组件中异常的生命周期钩子函数。</p><p>异步异常有，Windows.onerror全局对象监听、promise中自带的.catch异常处理、Windows.onunhandledrejection全局监听未处理的promise的异常。</p><p>其中Windows.onerror能够处理同步异常，也能 处理异步异常，但主要是处理同步异常，对于处理异步异常的能力相对来说比较弱。</p><h3 id="22、你了解axios的原理吗-有看过它的源码吗？"><a href="#22、你了解axios的原理吗-有看过它的源码吗？" class="headerlink" title="22、你了解axios的原理吗?有看过它的源码吗？"></a>22、你了解axios的原理吗?有看过它的源码吗？</h3><p>axios是基于promise的形成的，主要是用于发送网络请求，但是也可以进行请求拦截、响应拦截、取消请求等。axios底层基于promise，但也不仅仅只是基于promise，它还利用了浏览器环境和nodejs提供的原生功能，通过封装和处理的方式，让开发者更方便进行网络请求。</p><h3 id="23、vue要做权限管理该怎么做？"><a href="#23、vue要做权限管理该怎么做？" class="headerlink" title="23、vue要做权限管理该怎么做？"></a>23、vue要做权限管理该怎么做？</h3><p>Vue中的权限管理有：路由权限（路由守卫）、组件级权限控制（组件内部根据权限来决定某些功能或模块的显示和隐藏）、动态路由（会有一个路由表，根据权限来决定是否加载某些组件）、指令权限（通过编写自定义指令来控制元素的显示和隐藏）、按钮权限控制（给按钮加上权限，只有权限达到要求的才可以看见或者点击某个按钮）。具体要实现一个权限管理，首先要确定角色和权限的一个定义，在根据这些去进行一个更加详细的一个权限设置。</p><h3 id="24、说说你对keep-alive的理解是什么？"><a href="#24、说说你对keep-alive的理解是什么？" class="headerlink" title="24、说说你对keep-alive的理解是什么？"></a>24、说说你对keep-alive的理解是什么？</h3><p>keep-alive是vue中的一个内置组件，也是一种内部机制，可以对暂时不使用的组件进行一个缓存，而不是直接的销毁。如果需要对缓存的组件进行重新调用keep-alive也提供了相对应的钩子函数（activated)，能保证组件进行一个灵活的缓存（deactivated)和激活调用（activated)。</p><h3 id="25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？"><a href="#25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？" class="headerlink" title="25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？"></a>25、你对SPA单页面的理解，它的优缺点分别是什么？如何实现SPA应用？</h3><p>SPA单页面就是把所有资源集中到一个页面，优点是可以减少一个页面的刷新让用户用起来更加流畅，还可以减少服务器的一个压力（无需每次刷新都渲染整个页面），缺点是首次加载速度过慢。至于如何实现一个SPA应用，首先选择一个合适的前端框架(就比如说Vue)，配置相对应的路由管理，状态管理（vue中使用Vuex），组件化开发（可以更好的管理每一部分）、异步加载（懒加载，可以减低浏览器的一个性能），与后端api进行交互（从后端的api调取数据进行一个前端数据的渲染）。</p><h3 id="26、SPA的首屏加载慢怎么解决？"><a href="#26、SPA的首屏加载慢怎么解决？" class="headerlink" title="26、SPA的首屏加载慢怎么解决？"></a>26、SPA的首屏加载慢怎么解决？</h3><p>SPA首屏加载之所以慢，是因为首屏加载需要加载很多内容，（1）资源加载方面，我们可以采取懒加载模式，也就是目前所需要用到的先进行一个简单的加载，暂时不使用的可以先不进行一个加载。还可以采取服务器加速，将比较占内存的，渲染速度慢的，就比如说高清照片，可以放在服务器或者图床进行一个加速，可以提高首屏加载的一个速率。（2）在代码方面可以进行一个代码的拆分、代码的优化、使用压缩工具对代码的一个简单的压缩（3）网络方面可以采用一个CDN加速 或者网络协议的优化。</p><h3 id="27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？"><a href="#27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？" class="headerlink" title="27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？"></a>27、Vue项目本地开发完成后部署到服务器后报404是什么原因呢？</h3><p>第一种原因是路由的配置问题，检查路由配置使用的是否是history模式，而不是hash模式。第二种原因是路径的大小写问题，确保文件路径大小也一致。第三种原因是基础路径的问题，如果你在vue.config.js中配置publicPath，请确保他的指向是正确的。</p><h3 id="28、SSR解决了什么问题-有做过SSR吗-你是怎么做的"><a href="#28、SSR解决了什么问题-有做过SSR吗-你是怎么做的" class="headerlink" title="28、SSR解决了什么问题?有做过SSR吗?你是怎么做的?"></a>28、SSR解决了什么问题?有做过SSR吗?你是怎么做的?</h3><p>SSR不同于传统的客户端渲染，它是服务器端的一个渲染。它能很好使的解决SPA单页面应用的一个首屏加载缓慢或者加载白屏的问题，同时也进行了一个SEO的优化，便于爬虫进行爬取，这样可以提高网站的搜索引擎的排名。至于如何实现SSR，我们首先要选择一个支持SSR的框架，将数据等存储到服务器，在前端页面使用合适的生命钩子（mounted）进行激活调用，从而完成渲染。</p><h3 id="29、vue3有了解过吗-能说说跟vue2的区别吗"><a href="#29、vue3有了解过吗-能说说跟vue2的区别吗" class="headerlink" title="29、vue3有了解过吗?能说说跟vue2的区别吗?"></a>29、vue3有了解过吗?能说说跟vue2的区别吗?</h3><h4 id="1-性能优化："><a href="#1-性能优化：" class="headerlink" title="1. 性能优化："></a>1. <strong>性能优化：</strong></h4><ul><li><strong>响应式系统重写：</strong> Vue 3 中的响应式系统通过使用 Proxy 取代 Object.defineProperty 实现，提高了性能，使得更多的场景下能够更高效地追踪状态的变化。</li><li><strong>编译优化：</strong> Vue 3 的编译器进行了重写，生成的代码更小，运行时性能更好。</li></ul><h4 id="2-组合式-API："><a href="#2-组合式-API：" class="headerlink" title="2. 组合式 API："></a>2. <strong>组合式 API：</strong></h4><ul><li><strong>Composition API：</strong> Vue 3 引入了 Composition API，允许开发者更灵活地组织组件逻辑，尤其是对于复杂组件，代码可读性和维护性得到提升。</li></ul><h4 id="3-Teleport："><a href="#3-Teleport：" class="headerlink" title="3. Teleport："></a>3. <strong>Teleport：</strong></h4><ul><li><strong>Teleport 组件：</strong> Vue 3 引入了 Teleport 组件，使得在组件内的任何地方渲染内容到 DOM 中的其他位置变得更加容易。</li></ul><h4 id="4-Suspense："><a href="#4-Suspense：" class="headerlink" title="4. Suspense："></a>4. <strong>Suspense：</strong></h4><ul><li><strong>Suspense：</strong> Vue 3 中引入了 Suspense 组件，使得处理异步组件和代码分割更加容易，并提供更好的用户体验。</li></ul><h4 id="5-多根节点支持："><a href="#5-多根节点支持：" class="headerlink" title="5. 多根节点支持："></a>5. <strong>多根节点支持：</strong></h4><ul><li><strong>单文件组件多根节点：</strong> 在 Vue 3 的单文件组件中，可以直接包含多个根节点而无需使用额外的包装元素。</li></ul><h4 id="6-Fragment-和-Portals："><a href="#6-Fragment-和-Portals：" class="headerlink" title="6. Fragment 和 Portals："></a>6. <strong>Fragment 和 Portals：</strong></h4><ul><li><strong>Fragment 和 Portals：</strong> Vue 3 支持使用 Fragment（<code>&lt;template&gt;</code>）来包裹多个根节点，以及使用 Portals 来在组件树之外渲染内容。</li></ul><h4 id="7-全局-API-的改进："><a href="#7-全局-API-的改进：" class="headerlink" title="7. 全局 API 的改进："></a>7. <strong>全局 API 的改进：</strong></h4><ul><li><strong>全局 API 改进：</strong> Vue 3 中对全局 API 进行了调整和改进，例如，创建应用实例的方式发生了变化。</li></ul><h4 id="8-Typescript-支持："><a href="#8-Typescript-支持：" class="headerlink" title="8. Typescript 支持："></a>8. <strong>Typescript 支持：</strong></h4><ul><li><strong>Typescript 支持：</strong> Vue 3 在设计上更加友好地支持 TypeScript，提供了更好的类型推导和支持。</li></ul><h4 id="9-其他改进："><a href="#9-其他改进：" class="headerlink" title="9. 其他改进："></a>9. <strong>其他改进：</strong></h4><ul><li><strong>更小的体积：</strong> Vue 3 的体积相比 Vue 2 更小。</li><li><strong>更好的 TypeScript 支持：</strong> Vue 3 提供了更好的 TypeScript 支持，包括更准确的类型推断。</li><li><strong>更好的调试体验：</strong> Vue 3 改进了开发者工具，提供了更好的调试体验。</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;1、讲一下你对Vue生命周期的理解&quot;&gt;&lt;a href=&quot;#1、讲一下你对Vue生命周期的理解&quot; class=&quot;headerlink&quot; title=&quot;1、讲一下你对Vue生命周期的理解&quot;&gt;&lt;/a&gt;1、讲一下你对Vue生命周期的理解&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;</summary>
-      
-    
-    
-    
-    <category term="面试题" scheme="http://fuchengya.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    <category term="Vue" scheme="http://fuchengya.github.io/categories/Vue/"/>
-    
-    
     <category term="面试题" scheme="http://fuchengya.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    <category term="Vue" scheme="http://fuchengya.github.io/tags/Vue/"/>
     
   </entry>
   
